@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45437C331D1B284F00967812 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 45437C321D1B284F00967812 /* .travis.yml */; };
 		45699A9A1D1AC4C400B1BF70 /* SymondsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 45699A991D1AC4C400B1BF70 /* SymondsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45699AA11D1AC4C400B1BF70 /* SymondsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45699A961D1AC4C400B1BF70 /* SymondsAPI.framework */; };
 		45699AA61D1AC4C400B1BF70 /* SymondsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45699AA51D1AC4C400B1BF70 /* SymondsAPITests.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45437C321D1B284F00967812 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		45699A961D1AC4C400B1BF70 /* SymondsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SymondsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45699A991D1AC4C400B1BF70 /* SymondsAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SymondsAPI.h; sourceTree = "<group>"; };
 		45699A9B1D1AC4C400B1BF70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		45699A8C1D1AC4C400B1BF70 = {
 			isa = PBXGroup;
 			children = (
+				45437C321D1B284F00967812 /* .travis.yml */,
 				45699AB31D1AC77700B1BF70 /* Cartfile */,
 				45699AB41D1AC77700B1BF70 /* Cartfile.private */,
 				45C175E01D1AC8BE009789C5 /* SymondsAPI.podspec */,
@@ -212,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45437C331D1B284F00967812 /* .travis.yml in Resources */,
 				45699AB51D1AC77700B1BF70 /* Cartfile in Resources */,
 				45C175E11D1AC8BE009789C5 /* SymondsAPI.podspec in Resources */,
 				45699AB61D1AC77700B1BF70 /* Cartfile.private in Resources */,

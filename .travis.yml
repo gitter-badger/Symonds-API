@@ -1,0 +1,17 @@
+language: objective-c
+os: osx
+osx_image: xcode8
+xcode_workspace: SymondsAPI.xcworkspace
+xcode_scheme: SymondsAPI
+
+before_script:
+- export IOS_SIMULATOR_UDID=`instruments -s devices | grep "iPhone 6s (10.0" | awk -F '[ ]' '{print $4}' | awk -F '[\[]' '{print $2}' | sed 's/.$//'`
+- echo $IOS_SIMULATOR_UDID
+- open -a "simulator" --args -CurrentDeviceUDID $IOS_SIMULATOR_UDID
+
+script:
+- xcodebuild -sdk iphonesimulator -workspace SymondsAPI.xcworkspace -scheme SymondsAPI -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.0' build
+- xcodebuild -sdk iphonesimulator -workspace SymondsAPI.xcworkspace -scheme SymondsAPI -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.0' test
+
+after_success:
+- bash <(curl -s https://codecov.io/bash)
