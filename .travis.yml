@@ -7,6 +7,10 @@ xcode_scheme: SymondsAPI
 notifications:
   slack: geosor:OuEINhZebRxwRgs2NASXhsAH
 
+branches:
+  only:
+    - master
+
 before_script:
 - export IOS_SIMULATOR_UDID=`instruments -s devices | grep "iPhone 6s (10.0" | awk -F '[ ]' '{print $4}' | awk -F '[\[]' '{print $2}' | sed 's/.$//'`
 - echo $IOS_SIMULATOR_UDID
