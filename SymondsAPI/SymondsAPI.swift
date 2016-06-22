@@ -16,7 +16,7 @@ public class SymondsAPI {
     public let secret: String
     
     /// Your app's redirect URL
-    public let redirectURL: NSURL
+    public let redirectURL: URL
     
     /// The auth URL for data.psc.ac.uk
     public static let authURL = "https://data.psc.ac.uk/oauth/v2/auth"
@@ -32,7 +32,7 @@ public class SymondsAPI {
      
      - returns: A SymondsAPI object initialised with a clientID, secret, and redirect URL.
     */
-    public init(clientID: String, secret: String, redirectURL: NSURL = NSURL(string: "app://localhost")!) {
+    public init(clientID: String, secret: String, redirectURL: URL = URL(string: "app://localhost")!) {
         self.clientID = clientID
         self.secret = secret
         self.redirectURL = redirectURL

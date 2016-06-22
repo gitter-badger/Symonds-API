@@ -40,13 +40,13 @@ extension SymondsAPITests {
     
     /// Test that SymondsAPI.init(clientID:secret:redirectURL:) correctly sets clientID
     func test_SymondsAPI_initialiser_setsCorrectValue_for_clientID() {
-        let symondsAPI = SymondsAPI(clientID: self.clientID, secret: "", redirectURL: NSURL(string: "")!)
+        let symondsAPI = SymondsAPI(clientID: self.clientID, secret: "", redirectURL: URL(string: "")!)
         XCTAssertEqual(symondsAPI.clientID, self.clientID, "symondsAPI.clientID (\(symondsAPI.clientID)) should have been set to \(self.clientID) by SymondsAPI.init()")
     }
     
     /// Test that SymondsAPI.init(clientID:secret:redirectURL:) correctly sets secret
     func test_SymondsAPI_initialiser_setsCorrectValue_for_secret() {
-        let symondsAPI = SymondsAPI(clientID: "", secret: self.secret, redirectURL: NSURL(string: "")!)
+        let symondsAPI = SymondsAPI(clientID: "", secret: self.secret, redirectURL: URL(string: "")!)
         XCTAssertEqual(symondsAPI.secret, self.secret, "symondsAPI.secret (\(symondsAPI.secret)) should have been set to \(self.secret) by SymondsAPI.init()")
     }
     
