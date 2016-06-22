@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SymondsAPI"
-  s.version      = "0.0.4.5"
+  s.version      = "0.0.4.6"
   s.summary      = "An API to access information from data.psc.ac.uk"
   s.description  = <<-DESC
                     This is an API for accessing information through data.psc.ac.uk
