@@ -8,14 +8,4 @@
 
 import Foundation
 
-public class SymondsAPITestClass {
-    
-    public init() {
-        print("Test class initialised!")
-    }
-    
-    public func printTestMessage() {
-        print("Test message!")
-    }
-    
-}
+
