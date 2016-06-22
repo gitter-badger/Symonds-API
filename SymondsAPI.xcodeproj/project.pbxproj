@@ -182,12 +182,14 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 76NJQ6TG54;
 						DevelopmentTeamName = "Soren Mortensen (Personal Team)";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					45699A9F1D1AC4C400B1BF70 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 76NJQ6TG54;
 						DevelopmentTeamName = "Soren Mortensen (Personal Team)";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
