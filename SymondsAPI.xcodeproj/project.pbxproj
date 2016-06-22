@@ -13,6 +13,7 @@
 		45699AB21D1AC6B700B1BF70 /* setup in Resources */ = {isa = PBXBuildFile; fileRef = 45699AB11D1AC6B700B1BF70 /* setup */; };
 		45699AB51D1AC77700B1BF70 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 45699AB31D1AC77700B1BF70 /* Cartfile */; };
 		45699AB61D1AC77700B1BF70 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 45699AB41D1AC77700B1BF70 /* Cartfile.private */; };
+		45A9D6111D1AFDA900414A14 /* SymondsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9D6101D1AFDA900414A14 /* SymondsAPI.swift */; };
 		45C175E11D1AC8BE009789C5 /* SymondsAPI.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 45C175E01D1AC8BE009789C5 /* SymondsAPI.podspec */; };
 		45C3A94A1D1ACC05009EF180 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 45C3A9481D1ACC05009EF180 /* LICENSE */; };
 		45C3A94B1D1ACC05009EF180 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 45C3A9491D1ACC05009EF180 /* README.md */; };
@@ -38,6 +39,7 @@
 		45699AB11D1AC6B700B1BF70 /* setup */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = setup; sourceTree = "<group>"; };
 		45699AB31D1AC77700B1BF70 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		45699AB41D1AC77700B1BF70 /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
+		45A9D6101D1AFDA900414A14 /* SymondsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymondsAPI.swift; sourceTree = "<group>"; };
 		45C175E01D1AC8BE009789C5 /* SymondsAPI.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = SymondsAPI.podspec; sourceTree = "<group>"; };
 		45C3A9481D1ACC05009EF180 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		45C3A9491D1ACC05009EF180 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				45699A991D1AC4C400B1BF70 /* SymondsAPI.h */,
+				45A9D6101D1AFDA900414A14 /* SymondsAPI.swift */,
 				45699A9B1D1AC4C400B1BF70 /* Info.plist */,
 			);
 			path = SymondsAPI;
@@ -231,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45A9D6111D1AFDA900414A14 /* SymondsAPI.swift in Sources */,
 				45C3A94B1D1ACC05009EF180 /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
