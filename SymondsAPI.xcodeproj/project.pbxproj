@@ -10,6 +10,9 @@
 		45699A9A1D1AC4C400B1BF70 /* SymondsAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 45699A991D1AC4C400B1BF70 /* SymondsAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45699AA11D1AC4C400B1BF70 /* SymondsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45699A961D1AC4C400B1BF70 /* SymondsAPI.framework */; };
 		45699AA61D1AC4C400B1BF70 /* SymondsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45699AA51D1AC4C400B1BF70 /* SymondsAPITests.swift */; };
+		45699AB21D1AC6B700B1BF70 /* setup in Resources */ = {isa = PBXBuildFile; fileRef = 45699AB11D1AC6B700B1BF70 /* setup */; };
+		45699AB51D1AC77700B1BF70 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 45699AB31D1AC77700B1BF70 /* Cartfile */; };
+		45699AB61D1AC77700B1BF70 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 45699AB41D1AC77700B1BF70 /* Cartfile.private */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		45699AA01D1AC4C400B1BF70 /* SymondsAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SymondsAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45699AA51D1AC4C400B1BF70 /* SymondsAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymondsAPITests.swift; sourceTree = "<group>"; };
 		45699AA71D1AC4C400B1BF70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45699AB11D1AC6B700B1BF70 /* setup */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = setup; sourceTree = "<group>"; };
+		45699AB31D1AC77700B1BF70 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		45699AB41D1AC77700B1BF70 /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,9 @@
 		45699A8C1D1AC4C400B1BF70 = {
 			isa = PBXGroup;
 			children = (
+				45699AB31D1AC77700B1BF70 /* Cartfile */,
+				45699AB41D1AC77700B1BF70 /* Cartfile.private */,
+				45699AB01D1AC6B700B1BF70 /* bin */,
 				45699A981D1AC4C400B1BF70 /* SymondsAPI */,
 				45699AA41D1AC4C400B1BF70 /* SymondsAPITests */,
 				45699A971D1AC4C400B1BF70 /* Products */,
@@ -84,6 +93,14 @@
 				45699AA71D1AC4C400B1BF70 /* Info.plist */,
 			);
 			path = SymondsAPITests;
+			sourceTree = "<group>";
+		};
+		45699AB01D1AC6B700B1BF70 /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				45699AB11D1AC6B700B1BF70 /* setup */,
+			);
+			path = bin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +200,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45699AB51D1AC77700B1BF70 /* Cartfile in Resources */,
+				45699AB61D1AC77700B1BF70 /* Cartfile.private in Resources */,
+				45699AB21D1AC6B700B1BF70 /* setup in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +412,7 @@
 				45699AAC1D1AC4C400B1BF70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45699AAD1D1AC4C400B1BF70 /* Build configuration list for PBXNativeTarget "SymondsAPITests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +421,7 @@
 				45699AAF1D1AC4C400B1BF70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
