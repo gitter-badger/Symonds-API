@@ -10,7 +10,7 @@ import Foundation
 
 public class SymondsAPITestClass {
     
-    func printTestMessage() {
+    public func printTestMessage() {
         print("Test message!")
     }
     
