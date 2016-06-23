@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import SymondsAPI
+import SymondsAPI
 
 // MARK: Properties
 
@@ -30,7 +30,6 @@ extension SymondsAPITests {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
-        SymondsAPIVersionNumber
     }
     
 }
@@ -39,15 +38,30 @@ extension SymondsAPITests {
 
 extension SymondsAPITests {
     
-    /// Test that SymondsAPI.init(clientID:secret:redirectURL:)
-    func test_initialiser_setsClientIDCorrectly() {
-        let symondsAPI = SymondsAPI(clientID: self.clientID, secret: "", redirectURL: NSURL(string: "")!)
-        XCTAssertEqual(symondsAPI.clientID, self.clientID, "symondsAPI.clientID should have been set to self.clientID by symondsAPI.init()")
+    /// Test that SymondsAPI.init(clientID:secret:redirectURL:) correctly sets clientID
+    func test_SymondsAPI_initialiser_setsCorrectValue_for_clientID() {
+        let symondsAPI = SymondsAPI(clientID: self.clientID, secret: "", redirectURL: URL(string: "")!)
+        XCTAssertEqual(symondsAPI.clientID, self.clientID, "symondsAPI.clientID (\(symondsAPI.clientID)) should have been set to \(self.clientID) by SymondsAPI.init()")
     }
     
-    func test_initialiser_setsSecretCorrectly() {
-        let symondsAPI = SymondsAPI(clientID: "", secret: self.secret, redirectURL: NSURL(string: "")!)
-        XCTAssertEqual(symondsAPI.secret, self.secret, "symondsAPI.secret should have been set to self.secret by symondsAPI.init()")
+    /// Test that SymondsAPI.init(clientID:secret:redirectURL:) correctly sets secret
+    func test_SymondsAPI_initialiser_setsCorrectValue_for_secret() {
+        let symondsAPI = SymondsAPI(clientID: "", secret: self.secret, redirectURL: URL(string: "")!)
+        XCTAssertEqual(symondsAPI.secret, self.secret, "symondsAPI.secret (\(symondsAPI.secret)) should have been set to \(self.secret) by SymondsAPI.init()")
+    }
+    
+    /// Test that SymondsAPI.init(clientID:secret:redirectURL:) correctly sets redirectURL
+    func test_SymondsAPI_initialiser_setsCorrectValue_for_redirectURL() {
+        let testURL = URL(string: "https://github.com/sorenmortensen/Symonds-API")!
+        let symondsAPI = SymondsAPI(clientID: "", secret: "", redirectURL: testURL)
+        XCTAssertEqual(symondsAPI.redirectURL, testURL, "symondsAPI.redirectURL (\(symondsAPI.redirectURL)) should have been set to \(testURL) by SymondsAPI.init()")
+    }
+    
+    /// Test that SymondsAPI.init(clientID:secret:) correctly sets redirectURL with its default value
+    func test_SymondsAPI_initialiser_setsCorrectDefaultValue_for_redirectURL() {
+        let symondsAPI = SymondsAPI(clientID: "", secret: "")
+        let testURL = URL(string: "app://localhost")!
+        XCTAssertEqual(symondsAPI.redirectURL, testURL, "symondsAPI.redirectURL (\(symondsAPI.redirectURL)) should have been set to default value \(testURL) by SymondsAPI.init()")
     }
     
 }
