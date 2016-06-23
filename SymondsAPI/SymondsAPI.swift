@@ -17,12 +17,23 @@ public class SymondsAPI {
     public let secret: String
     
     /// Your app's redirect URL
-    public let redirectURL: URL
+    public let redirectURL: String
+    
+    public var authURL: URL {
+        get {
+            let clientIDQueryItem = URLQueryItem(name: "client_id", value: clientID)
+            let responseTypeQueryItem = URLQueryItem(name: "response_type", value: "code")
+            let redirectURIQueryItem = URLQueryItem(name: "redirect_uri", value: redirectURL)
+            var components = URLComponents(string: baseAuthURL)!
+            components.queryItems = [clientIDQueryItem, responseTypeQueryItem, redirectURIQueryItem]
+            return components.url!
+        }
+    }
     
     /// The auth URL for data.psc.ac.uk
-    public static let authURL = "https://data.psc.ac.uk/oauth/v2/auth"
+    internal let baseAuthURL = "https://data.psc.ac.uk/oauth/v2/auth"
     /// The token URL for data.psc.ac.uk
-    public static let tokenUrl = "https://data.psc.ac.uk/oauth/v2/token"
+    internal let baseTokenUrl = "https://data.psc.ac.uk/oauth/v2/token"
     
     /**
      Initialises a SymondsAPI object with your app's keys.
@@ -33,10 +44,18 @@ public class SymondsAPI {
      
      - returns: A SymondsAPI object initialised with a clientID, secret, and redirect URL.
     */
-    public init(clientID: String, secret: String, redirectURL: URL) {
+    public init(clientID: String, secret: String, redirectURL: String) {
         self.clientID = clientID
         self.secret = secret
         self.redirectURL = redirectURL
+    }
+    
+    public func getAccessToken(_ completionHandler: (String) -> Void) {
+        UIApplication.shared().open(authURL, options: [String : AnyObject](), completionHandler: { _ in /* ... */ })
+    }
+    
+    public func handleCallbackURL(url: URL) {
+        
     }
     
 }
