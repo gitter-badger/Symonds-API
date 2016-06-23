@@ -29,11 +29,11 @@ public class SymondsAPI {
      
      - parameter clientID: Your app's client ID (from data.psc.ac.uk).
      - parameter secret: Your app's secret (from data.psc.ac.uk).
-     - parameter redirectURL: Your app's redirect URL (from data.psc.ac.uk). Default value is "app://localhost"
+     - parameter redirectURL: Your app's redirect URL. This should also be set in your project's info.plist with the value stored on data.psc.ac.uk for your app.
      
      - returns: A SymondsAPI object initialised with a clientID, secret, and redirect URL.
     */
-    public init(clientID: String, secret: String, redirectURL: URL = URL(string: "app://localhost")!) {
+    public init(clientID: String, secret: String, redirectURL: URL) {
         self.clientID = clientID
         self.secret = secret
         self.redirectURL = redirectURL

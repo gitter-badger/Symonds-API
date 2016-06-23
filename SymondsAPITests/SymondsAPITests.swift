@@ -57,11 +57,4 @@ extension SymondsAPITests {
         XCTAssertEqual(symondsAPI.redirectURL, testURL, "symondsAPI.redirectURL (\(symondsAPI.redirectURL)) should have been set to \(testURL) by SymondsAPI.init()")
     }
     
-    /// Test that SymondsAPI.init(clientID:secret:) correctly sets redirectURL with its default value
-    func test_SymondsAPI_initialiser_setsCorrectDefaultValue_for_redirectURL() {
-        let symondsAPI = SymondsAPI(clientID: "", secret: "")
-        let testURL = URL(string: "app://localhost")!
-        XCTAssertEqual(symondsAPI.redirectURL, testURL, "symondsAPI.redirectURL (\(symondsAPI.redirectURL)) should have been set to default value \(testURL) by SymondsAPI.init()")
-    }
-    
 }
