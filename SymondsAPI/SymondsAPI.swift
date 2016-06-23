@@ -51,10 +51,21 @@ public class SymondsAPI {
     }
     
     public func getAccessToken(_ completionHandler: (String) -> Void) {
-        UIApplication.shared().open(authURL, options: [String : AnyObject](), completionHandler: { _ in /* ... */ })
+        if #available(iOS 10.0, *) {
+            UIApplication.shared().open(authURL, options: [String : AnyObject](), completionHandler: { _ in /* ... */ })
+        } else {
+            UIApplication.shared().openURL(authURL)
+        }
     }
     
-    public func handleCallbackURL(url: URL) {
+    public func handleCallbackURL(_ url: URL) {
+        let query = URLComponents(url: url, resolvingAgainstBaseURL: false)?.query
+        if let codeString = query where codeString.contains("code=") {
+            exchangeCodeForToken(codeString.components(separatedBy: "code=")[1])
+        }
+    }
+    
+    internal func exchangeCodeForToken(_ code: String) {
         
     }
     
