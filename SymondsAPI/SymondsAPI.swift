@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// An API for data.psc.ac.uk
 public class SymondsAPI {
     
     /// Your app's client ID
