@@ -50,7 +50,7 @@ public class SymondsAPI {
         self.redirectURL = redirectURL
     }
     
-    public func getAccessToken(_ completionHandler: (String) -> Void) {
+    public func getAccessToken() {
         if #available(iOS 10.0, *) {
             UIApplication.shared().open(authURL, options: [String : AnyObject](), completionHandler: { _ in /* ... */ })
         } else {
@@ -58,15 +58,15 @@ public class SymondsAPI {
         }
     }
     
-    public func handleCallbackURL(_ url: URL) {
+    public func handleCallbackURL(_ url: URL) -> Bool {
         let query = URLComponents(url: url, resolvingAgainstBaseURL: false)?.query
         if let codeString = query where codeString.contains("code=") {
-            exchangeCodeForToken(codeString.components(separatedBy: "code=")[1])
-        }
+            return exchangeCodeForToken(codeString.components(separatedBy: "code=")[1])
+        } else { return false }
     }
     
-    internal func exchangeCodeForToken(_ code: String) {
-        
+    internal func exchangeCodeForToken(_ code: String) -> Bool {
+        return false
     }
     
 }
