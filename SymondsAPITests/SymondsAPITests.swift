@@ -13,8 +13,8 @@ import SymondsAPI
 
 class SymondsAPITests: XCTestCase {
     
-    let clientID = "29_67x28ouh3tkwco8k0ocsws0o4cc8c4s8s44gk0k444cc8ssoo8"
-    let secret = "3h33t6jpfngg8coso4w4k44k4ck40wk0kowgogggogkossws4c"
+    let clientID = "clientID-example-SymondsAPI-tests-2040231533"
+    let secret = "symondsAPItests_8471489219_secret_example"
     
 }
 
