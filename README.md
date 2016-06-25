@@ -1,5 +1,7 @@
 # Symonds API
 
+[![codecov](https://codecov.io/gh/sorenmortensen/Symonds-API/branch/master/graph/badge.svg)](https://codecov.io/gh/sorenmortensen/Symonds-API)
+
 This is an API for accessing information from data.psc.ac.uk
 
 ## Installation
