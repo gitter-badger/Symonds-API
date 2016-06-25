@@ -1,6 +1,6 @@
 # Symonds API
 
-[![codecov](https://codecov.io/gh/sorenmortensen/Symonds-API/branch/master/graph/badge.svg)](https://codecov.io/gh/sorenmortensen/Symonds-API)
+[![Build Status](https://travis-ci.org/sorenmortensen/Symonds-API.svg?branch=master)](https://travis-ci.org/sorenmortensen/Symonds-API) [![codecov](https://codecov.io/gh/sorenmortensen/Symonds-API/branch/master/graph/badge.svg)](https://codecov.io/gh/sorenmortensen/Symonds-API)
 
 This is an API for accessing information from data.psc.ac.uk
 
