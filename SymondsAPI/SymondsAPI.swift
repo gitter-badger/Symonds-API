@@ -35,11 +35,11 @@ public final class SymondsAPI {
     }
     
     /// Your app's client ID, enerated when you register an app at data.psc.ac.uk.
-    internal let clientID: String
+    public let clientID: String
     /// Your app's secret, generated when you register an app at data.psc.ac.uk.
-    internal let secret: String
+    public let secret: String
     /// Your app's redirect URL; this should be set to the same value as it is on data.psc.ac.uk.
-    internal let redirectURL: String
+    public let redirectURL: String
     
     /// The base authentication URL for data.psc.ac.uk.
     internal let baseAuthURL = "https://data.psc.ac.uk/oauth/v2/auth"
