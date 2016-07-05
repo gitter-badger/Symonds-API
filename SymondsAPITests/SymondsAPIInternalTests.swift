@@ -15,6 +15,7 @@ class SymondsAPIInternalTests: XCTestCase {
     
     let clientID = SymondsAPITestsHelper.clientID
     let secret = SymondsAPITestsHelper.secret
+    let redirectURL = SymondsAPITestsHelper.redirectURL
     
 }
 
@@ -52,9 +53,8 @@ extension SymondsAPIInternalTests {
     
     /// Test that SymondsAPI.init(clientID:secret:redirectURL:) correctly sets redirectURL
     func test_SymondsAPI_initialiser_setsCorrectValue_for_redirectURL() {
-        let testURL = "https://github.com/sorenmortensen/Symonds-API"
-        let symondsAPI = SymondsAPI(clientID: "", secret: "", redirectURL: testURL)
-        XCTAssertEqual(symondsAPI.redirectURL, testURL, "symondsAPI.redirectURL (\(symondsAPI.redirectURL)) should have been set to \(testURL) by SymondsAPI.init()")
+        let symondsAPI = SymondsAPI(clientID: "", secret: "", redirectURL: redirectURL)
+        XCTAssertEqual(symondsAPI.redirectURL, self.redirectURL, "symondsAPI.redirectURL (\(symondsAPI.redirectURL)) should have been set to \(self.redirectURL) by SymondsAPI.init()")
     }
     
 }

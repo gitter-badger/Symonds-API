@@ -12,5 +12,6 @@ class SymondsAPITestsHelper {
     
     static let clientID = "clientID-example-SymondsAPI-tests-2040231533"
     static let secret = "symondsAPItests_8471489219_secret_example"
+    static let redirectURL = "symondsapi://com.sorenmortensen.SymondsAPI"
     
 }
