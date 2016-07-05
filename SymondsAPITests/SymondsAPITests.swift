@@ -13,8 +13,8 @@ import SymondsAPI
 
 class SymondsAPITests: XCTestCase {
     
-    let clientID = "clientID-example-SymondsAPI-tests-2040231533"
-    let secret = "symondsAPItests_8471489219_secret_example"
+    let clientID = SymondsAPITestsHelper.clientID
+    let secret = SymondsAPITestsHelper.secret
     
 }
 
@@ -38,23 +38,6 @@ extension SymondsAPITests {
 
 extension SymondsAPITests {
     
-    /// Test that SymondsAPI.init(clientID:secret:redirectURL:) correctly sets clientID
-    func test_SymondsAPI_initialiser_setsCorrectValue_for_clientID() {
-        let symondsAPI = SymondsAPI(clientID: self.clientID, secret: "", redirectURL: "")
-        XCTAssertEqual(symondsAPI.clientID, self.clientID, "symondsAPI.clientID (\(symondsAPI.clientID)) should have been set to \(self.clientID) by SymondsAPI.init()")
-    }
     
-    /// Test that SymondsAPI.init(clientID:secret:redirectURL:) correctly sets secret
-    func test_SymondsAPI_initialiser_setsCorrectValue_for_secret() {
-        let symondsAPI = SymondsAPI(clientID: "", secret: self.secret, redirectURL: "")
-        XCTAssertEqual(symondsAPI.secret, self.secret, "symondsAPI.secret (\(symondsAPI.secret)) should have been set to \(self.secret) by SymondsAPI.init()")
-    }
-    
-    /// Test that SymondsAPI.init(clientID:secret:redirectURL:) correctly sets redirectURL
-    func test_SymondsAPI_initialiser_setsCorrectValue_for_redirectURL() {
-        let testURL = "https://github.com/sorenmortensen/Symonds-API"
-        let symondsAPI = SymondsAPI(clientID: "", secret: "", redirectURL: testURL)
-        XCTAssertEqual(symondsAPI.redirectURL, testURL, "symondsAPI.redirectURL (\(symondsAPI.redirectURL)) should have been set to \(testURL) by SymondsAPI.init()")
-    }
     
 }
